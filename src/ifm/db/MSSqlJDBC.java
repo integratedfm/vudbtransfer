@@ -31,9 +31,9 @@ public class MSSqlJDBC {
 
         if (dbConnection == null) {
             
-            DB_CONNECTION = VuDBTransfer.getProp("ifm.vu.dbconnection");
-            DB_USER = VuDBTransfer.getProp("ifm.vu.db_user");
-            DB_PASSWORD = VuDBTransfer.getProp("ifm.vu.db_passwd");
+            DB_CONNECTION = VuDBTransfer.getProp("ifm.src.dbconnection");
+            DB_USER = VuDBTransfer.getProp("ifm.src.db_user");
+            DB_PASSWORD = VuDBTransfer.getProp("ifm.src.db_passwd");
 
             try {
                 Class.forName(DB_DRIVER);
