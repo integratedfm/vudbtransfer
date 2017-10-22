@@ -10,7 +10,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import jdk.nashorn.internal.ir.Statement;
 import org.apache.log4j.Logger;
 
 /**
@@ -27,9 +26,9 @@ public class OracleJDBC {
 
     public static Connection getOracleDBConnection() {
         if (dbConnection == null) {
-            DB_CONNECTION = VuDBTransfer.getProp("ifm.rmit.dbconnection");
-            DB_USER = VuDBTransfer.getProp("ifm.rmit.db_user");
-            DB_PASSWORD = VuDBTransfer.getProp("ifm.rmit.db_passwd");
+            DB_CONNECTION = VuDBTransfer.getProp("ifm.dest.dbconnection");
+            DB_USER = VuDBTransfer.getProp("ifm.dest.db_user");
+            DB_PASSWORD = VuDBTransfer.getProp("ifm.dest.db_passwd");
 
             try {
                 //logger.debug("Trying to get DB_Driver");
